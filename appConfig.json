@@ -1,0 +1,7 @@
+{
+    "database" : {
+        "name" : "IECG",
+        "host" : "localhost",
+        "port" : 27017
+    }
+}
