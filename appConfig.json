@@ -1,7 +1,11 @@
 {
     "database" : {
-        "name" : "IECG",
+        "name" : "mongodb",
+        "proxyPath" : "./proxy/mongo.js",
         "host" : "localhost",
-        "port" : 27017
+        "port" : 27017,
+        "details" : {
+            "db" : "IECG"
+        }
     }
 }

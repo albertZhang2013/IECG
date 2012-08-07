@@ -1,7 +1,8 @@
 /**
  * Module dependencies.
  */
-var MONGO = require('../../proxy/mongo').mongodb;
+var path = require('path')
+  , proxy = require(path.resolve('./proxy/proxy.js'));
 
 /**
  * Get department list
@@ -24,9 +25,8 @@ function getDeptList (req, res) {
       DeptName: '3003'
     }
   ];*/
-  var mongodb = new MONGO('IECG', 'localhost', 27017);
 
-  mongodb.findAll('department', function (error, results) {
+  proxy.findAll('department', function (error, results) {
     res.send(JSON.stringify(results));
   });
 };

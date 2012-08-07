@@ -103,7 +103,7 @@ Mongo.prototype.addCommentToArticle = function(articleId, comment, callback){
   });
 };*/
 
-exports.mongodb = Mongo;
+exports.db = new Mongo();
 
 function callbackWithClose (db, error, resluts, callback) {
   if (error)
